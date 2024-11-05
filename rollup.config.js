@@ -56,6 +56,11 @@ export default [
     ],
   },
   {
+    input: "tailwind.config.js",
+    output: [{ file: "dist/tailwind.config.js" }],
+    plugins: [terser()],
+  },
+  {
     input: "src/index.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
